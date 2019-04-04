@@ -146,7 +146,7 @@ function sessaoToString(sessao){
 }
 
 var fs = require('fs');
-var textByLine = fs.readFileSync('selecao/proposals.txt').toString().split("\n");
+var textByLine = fs.readFileSync('proposals.txt').toString().split("\n");
 var element;
 var palestras=[];
 for (let index = 0; index < textByLine.length; index++) {
@@ -167,7 +167,7 @@ for (let index = 0; index < tracks.length; index++) {
     resposta = resposta + trackToString(element);    
 }
 
-fs.writeFile("selecao/resposta.txt", resposta, function(erro) {
+fs.writeFile("resposta.txt", resposta, function(erro) {
     if(erro) {
         throw erro;
     }
